@@ -5,8 +5,12 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "start": "node src/index.js",
+    "build": "node src/buildLibc.js",
+    "build:hello": "npm run start -- neogeo-project/hello/config.mjs",
     "lint": "eslint src",
-    "download:tools": "node src/downloadTools.js"
+    "setup": "node src/setup.js",
+    "clean": "TODO rimraf"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,7 @@
   "dependencies": {
     "download": "^8.0.0",
     "nodemon": "^2.0.19",
-    "p-all": "^4.0.0"
+    "p-all": "^4.0.0",
+    "uid": "^2.0.0"
   }
 }
